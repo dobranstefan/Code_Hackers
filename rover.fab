@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="fable_wait_until" id="I:/p[wBgjnL(}Q]AE.KS" x="-542" y="-448">
+    <value name="WAIT">
+      <shadow type="fable_check_custom_key" id="TE|2mmUGwa2[ZQ0fHs{F">
+        <field name="KEYBUTTON">KEYCODE_UP</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="R2%1%i%NI~F@kT^nj;g]">
+        <field name="MODE">UNTIL</field>
+        <value name="BOOL">
+          <shadow type="logic_boolean" id="DB(O,,31q=(+bt}c6jh5">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+          <block type="fable_check_key" id="e_c=Z-h{,LiFjt4Z|{k_">
+            <field name="CHECK_KEY">down</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="fable_set_speed_simple" id="b4~l^`9J0?Pf}9:p]Lx4">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+            <field name="MOVEMENT">forward</field>
+            <field name="ID">C1R</field>
+            <next>
+              <block type="fable_set_speed_simple" id="(@OWm+zYq6W6Oqmm./o6">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                <field name="MOVEMENT">backward</field>
+                <field name="ID">UI2</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_whileUntil" id="GcH{7,o,X[rO{,ZiO4F*">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <shadow type="logic_boolean" id="}.EG95!|F[F1tXB=7qCz">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="fable_check_key" id="H:-PDRd:M1ov1OILEn;/">
+                <field name="CHECK_KEY">down</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="fable_set_speed_simple" id="k]P:?a96GDD($6bR8G_2">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                <field name="MOVEMENT">backward</field>
+                <field name="ID">C1R</field>
+                <next>
+                  <block type="fable_set_speed_simple" id="gZ,#JwnfxU`O14Y^J;dF">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" id_input="false"></mutation>
+                    <field name="MOVEMENT">forward</field>
+                    <field name="ID">UI2</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
